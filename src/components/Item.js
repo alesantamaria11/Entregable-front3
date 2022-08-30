@@ -14,10 +14,10 @@ export default function Item({item}) {
     return (
       <div className='producto'>
         {/* maquetar Item aquí */}
-        <h3>{item.id}</h3>
-        <p></p>
-        <h5></h5>
-        <button></button>
+        <h3>{item.producto.nombre}</h3>
+        <p>{item.producto.descripcion}</p>
+        <h5>En stock {item.stock}</h5>
+        <button>COMPRAR</button>
       </div>
     )
   }
