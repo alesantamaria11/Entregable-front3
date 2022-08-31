@@ -20,7 +20,7 @@ function App() {
   return (
     <div className="App">
       <Cabecera></Cabecera>
-      <Listado></Listado>
+      <Listado>{actualizarCompra}</Listado>
     </div>
   );
 }
