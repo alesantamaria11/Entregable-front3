@@ -1,4 +1,4 @@
-
+import React, { useState } from "react";
 // El componente Item no tiene componentes hijos.
 // ESTADO: Item debe tener un número para almacenar la cantidad de stock, la misma se la defina el padre a la hora de crearlo.
 // MÉTODOS: Item debe manejar el click de su boton para restar la cantidad en stock de sí mismo y a su vez poder aumentar el estado de su "abuelo" App.
@@ -11,13 +11,23 @@
 
 export default function Item({item}) {
 
+  // const stockInicial = (item);
+  const [stock, setStock] = useState(item.stock);
+
+  function actualizarStock(){
+    if (stock>0) {
+      setStock(stock-1);
+    } 
+  }
+
+
     return (
       <div className='producto'>
         {/* maquetar Item aquí */}
         <h3>{item.producto.nombre}</h3>
         <p>{item.producto.descripcion}</p>
-        <h5>En stock {item.stock}</h5>
-        <button>COMPRAR</button>
+        <h5>En stock: {stock==0 ? <span>agotado</span> : stock}</h5>
+        <button onClick={actualizarStock}>COMPRAR</button>
       </div>
     )
   }
