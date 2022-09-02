@@ -10,8 +10,7 @@ import Listado from './components/Listado';
 
 function App() {
 
-  const valorInicial = 0;
-  const [compra, setCompra] = useState(valorInicial);
+  const [compra, setCompra] = useState(0);
 
   function actualizarCompra(){
     setCompra(compra+1);
@@ -20,7 +19,7 @@ function App() {
   return (
     <div className="App">
       <Cabecera></Cabecera>
-      <Listado>{actualizarCompra}</Listado>
+      <Listado></Listado>
     </div>
   );
 }

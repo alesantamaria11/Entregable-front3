@@ -19,7 +19,6 @@ export default function Listado() {
 
   return (
     <div className='container'>
-      {/* renderizamos los Item aquí */}
       {listadoItems}
     </div>
   )
