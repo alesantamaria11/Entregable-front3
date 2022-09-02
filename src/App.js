@@ -10,16 +10,16 @@ import Listado from './components/Listado';
 
 function App() {
 
-  const [compra, setCompra] = useState(0);
+  const [carrito, setCarrito] = useState(0);
 
-  function actualizarCompra(){
-    setCompra(compra+1);
+  function actualizarCarrito(){
+    setCarrito(carrito+1);
   }
 
   return (
     <div className="App">
-      <Cabecera></Cabecera>
-      <Listado></Listado>
+      <Cabecera/>
+      <Listado carrito={()=> actualizarCarrito()}/>
     </div>
   );
 }
